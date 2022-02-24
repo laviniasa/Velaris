@@ -16,6 +16,8 @@ leitura {
         id_usuario: 1,
         nome_livro: "Maldita Realeza",
         autor_livro: "Meri Schreave",
+        sinopse: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim earum? Dolore atque nemo reiciendis dolores nihil eum earum quos quas non, fugiat, mollitia ea alias explicabo vero. Est, corporis.",
+        ano_lancamento: 2020,
     }
 }
 
@@ -23,7 +25,7 @@ livro {
     {
         nome_livro: "Maldita Realeza",
         autor_livro: "Meri Schreave",
-        sinopse: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim earum? Dolore atque nemo reiciendis dolores nihil eum earum quos quas non, fugiat, mollitia ea alias explicabo vero. Est, corporis."
+        sinopse: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim earum? Dolore atque nemo reiciendis dolores nihil eum earum quos quas non, fugiat, mollitia ea alias explicabo vero. Est, corporis.",
     }
 }
 
@@ -63,6 +65,8 @@ leitura {
         nome_livro: "Maldita Realeza",
         id_livro: 1,
         id_usuario: 1,
+        sinopse: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim earum? Dolore atque nemo reiciendis dolores nihil eum earum quos quas non, fugiat, mollitia ea alias explicabo vero. Est, corporis.",
+        ano_lancamento: 2020,
     }
 }
 
@@ -108,7 +112,6 @@ usuario {
 
 leitura {
     {
-        autor_livro: "Meri Schreave",
         nome_livro:" Maldita Realeza",
     }
 }
@@ -117,7 +120,6 @@ livro {
     {
         nome_livro: "Maldita Realeza",
         autor_livro: "Meri Schreave",
-        sinopse: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, enim earum? Dolore atque nemo reiciendis dolores nihil eum earum quos quas non, fugiat, mollitia ea alias explicabo vero. Est, corporis."
     }
 }
 
