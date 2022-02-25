@@ -34,7 +34,7 @@ h4 {
 
 .sinopse {
     display: flex;
-    width: 90%;
+    width: 50%;
     height: 150px;
     border: 1px solid rgba(128, 128, 128, 0.479);
     border-radius: 5px;
@@ -48,8 +48,8 @@ h4 {
 
 .cap {
     display: flex;
-    width: 90%;
-    height: 250px;
+    width: 50%;
+    height: 300px;
     border: 1px solid rgba(128, 128, 128, 0.479);
     border-radius: 5px;
     margin-top: 30px;
