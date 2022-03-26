@@ -9,10 +9,16 @@ const cliente_get = (req, res) => {
 }
 
 const cliente_post = (req, res) => {
-    let string = `insert into tb_cliente values (default,"${req.body.nome}","${req.body.cpf}","${req.body.rg}","${req.body.email}","${req.body.senha}","${req.body.imagem}","${req.body.telefone}")`;
+    let body = req.body
+    let string = `insert into tb_cliente(nome, cpf, usuario, email, senha) values(
+        "${body.nome}",
+        "${body.cpf}",
+        "${body.usuario}",
+        "${body.email}",
+        "${body.senha}")`;
     con.query(string, (err, result) => {
         if (result.affectedRows == 1) {
-            res.json(model.model_post(req.body, result.insertId))
+            res.json(model.model_post(body, result.insertId))
         } else {
             res.status(304).end()
         }
@@ -27,7 +33,6 @@ const cliente_update = (req, res) => {
         } else {
             res.status(404).end()
         }
-
     })
 
 }
