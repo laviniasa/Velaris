@@ -1,0 +1,283 @@
+﻿clientes login ( POST ) {
+	{
+		cpf: 785.155.474-05,
+		senha: 1570(MD5)
+	}
+
+	return {
+		id_cliente: 1,
+		nome: jade sthefane,
+		usuario: michael,
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+	}
+}
+-- já fiz
+clientes cadastro ( POST ) {
+	{
+		nome: jade sthefane,
+		cpf: 785.155.474-05,
+		usuario: michael,
+		email: jade.sthh@gmail.com
+		senha: 1570(MD5)
+	}
+
+	return {
+		id_cliente: 1,
+		nome: jade sthefane,
+		usuario: michael
+	}
+}
+--já fiz
+cliente ( PUT ) {
+	{
+		id_cliente: 1,
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+		rg: 21.256.149-2,
+		telefone: (19)998357246,
+	}
+
+	return {
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+	}
+}
+--feito -- falta formatar retorno
+pix ( GET /RECEBE ID DO CLIENTE/) {
+	status: true,
+	tipo: cpf,
+	cpf: 785.155.474-05
+}
+
+--feito
+pix ( POST /recebe as informacao do cliente(telefone ou email ou cpf ou chave aleatória) {
+	{
+		id_cliente: 2
+		tipo: cpf	
+		status: true,
+		chave: cvnvjnvd4s4c48787v4v,
+		|| ou {
+			telefone: null,
+			email: null,
+			cpf: null, 
+		}
+	}
+
+	return {
+		status: true
+	}
+}
+
+--feito
+pix ( PUT /RECEBE ID DO CLIENTE/) {
+	{
+			
+		chave: "2654789"
+	}
+
+	return {
+		chave: "afafafdasadfasdf"
+	}
+}
+
+transações ( GET /RECEBE ID DO CLIENTE/ ){
+	{
+		id_cliente: 1,
+		tipo: pix,
+		status: pagar,
+		valor: 00,
+		data: null,
+		cliente: {
+			nome: mikaelly,
+		}
+	}	
+}
+
+transações ( POST ){
+	{
+		id_cliente: 1,
+		id_conta: 2,
+		tipo: pix,
+		status: pagar ou receber,
+		valor: 1058.75,
+		data: date
+	}
+
+	return {
+		status: sucesso
+	}
+}
+
+--feito falta formatar retorno
+contas ( GET // ID CLIENTE //) {
+	return {
+		[
+			{
+				tipo: contanta-corrente,
+				saldo: 4841.00,
+				limite: 800.00,
+				numero_conta: 01524		
+			},
+			{
+				tipo: poupança,
+				saldo: 2000,
+				numero_conta: 017415524		
+			}
+		]
+		
+	}
+}
+--feito falta formatar retorno
+contas ( GET // NUMERO DA CONTA //) {
+	return {
+		
+			{
+				tipo: contanta-corrente,
+				saldo: 4841.00,
+				limite: 800.00,
+				numero_conta: 01524		
+			}
+		
+		
+	}
+}
+
+contas ( POST ) {
+	{
+		id_cliente: 1,
+		tipo: contanta-corrente,
+		saldo: 4841.00,
+		limite: 800.00,
+		numero_conta: 01524
+	}
+
+	return: {
+		status: sucesso
+	}
+}
+
+contas ( PUT /APENAS ALTERA LIMITE/ // RECEBE ID CLIENTE //){
+	{
+		status: receber,
+		valor: 50
+	}
+
+	return {
+		status: sucesso
+	}
+}
+
+// ALTERA SALDO
+contas ( PUT / RECEBE NUMERO DA CONTA / ){
+	{
+		saldo: 2000
+	}
+
+	return {
+		status: sucesso
+	}
+}
+
+
+
+
+
+//// ADM ////
+
+administrador login ( POST ){
+
+	cpf: 753.951.456.05,
+	senha: 1570(MD5)
+
+	return {
+		id_administrador:1,
+		nome: jepherson silva,
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+	}
+}
+
+administrador ( POST ){
+	{
+		id_administrador:1,
+		nome: jepherson silva,
+		cpf: 753.951.456.05
+		email:jepher104@hotmai.com
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+		senha: 1570(MD5)
+	}
+
+	return {
+		id_administrador:1,
+		nome: jepherson silva,
+		imagem: https://raw.githubusercontent.com/MiichaelJose/-banco-digital-/main/doc/UML.png,
+	}
+} 
+
+
+administrador ( DELETE / RECEBE ID DO ADM /){
+
+	return {
+		status: deletado com sucesso
+	}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cartões ( POST ){
+	{
+		id_conta: 1,
+		tipo: debito ,
+		numero: 4854 8678 2414,
+		validade: 12/2023,
+		code: 578,
+		saldo: null,
+		limite: null,
+	}
+
+	return {
+		status: sucesso
+	}
+}
+
+cartões( GET ){
+	[
+
+		{
+			tipo: crédito,
+			numero: 4854 8678 2414,
+			validade: 12/2023,
+			saldo: 1000,
+			limite: 500
+		},
+		{
+			tipo: débito
+			numero: 4854 8678 2414,
+			validade: 12/2023,
+			saldo: null,
+			limite: null
+		}
+	]
+	
+}
+
+
+cartões( GET // RECEBE NUMERO DO CARTAO //){
+	return {
+		id_cartao:1,
+		numero: 1231221,
+		id_conta:1,
+		saldo: 200
+	}
+}
