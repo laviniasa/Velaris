@@ -12,25 +12,13 @@
 </head>
 
 <body>
-
     <header>
         <nav>
             <img src="../assets/velaris.png" class="velaris" alt="Velaris Books">
-            <div class="filter">
-                <div class="lupa">
-                    <img src="../assets/lupa.png" onclick="filtrar()" alt="">
-                </div>
-                <input type="text" id="id" class="inp">
-                <input type="button" value="Buscar" onclick="limpar()">
-
-                <!-- <button type="button" onclick="filtrar()">Filtrar</button> -->
-                <!-- <ul id="lista">
-                    <li>Larissa</li>
-                    <li>Elian</li>
-                    <li>Lavinia</li>
-                    <li>Eleanor</li>
-                </ul> -->
-                <!-- <input type="text" class="inp" placeholder="   Buscar..."> -->
+            <input type="text" id="txtColuna1" onKeyUp="filtrar()" />
+            <div class="lupa">
+                <img src="../assets/lupa.png" onclick="filtrar()" alt="">
+            </div>
             </div>
             <div class="mobile-menu">
                 <div class="line1"></div>
@@ -44,7 +32,8 @@
                         src="../assets/writing.png"></li>
                 <li class="alinhar"><a href="../leitura/index.html">READ</a><img class="img"
                         src="../assets/reading-book.png"></li>
-                <li class="alinhar"><a href="../login/index.html" onclick="handleLogoutClick()">LOGOUT</a><img class="img" src="../assets/sair.png">
+                <li class="alinhar"><a href="../login/index.html" onclick="handleLogoutClick()">LOGOUT</a><img
+                        class="img" src="../assets/sair.png">
                 </li>
             </ul>
         </nav>
@@ -59,8 +48,8 @@
                         <th>escritor</th>
                     </tr>
                     <tr>
-                        <th><input type="text" id="txtColuna1" onKeyUp="filtrar()" /></th>
-                        <th><input type="text" id="txtColuna2" onKeyUp="filtrarGenero()" /></th>
+                        <th><input type="text" id="txtColuna1" onKeyUp="filtrar()" /></th> 
+                         <th><input type="text" id="txtColuna2" onKeyUp="filtrarGenero()" /></th>
                         <th><input type="text" id="txtColuna3" onKeyUp="filtrarEscritor()" /></th>
                     </tr>
                 </thead>
@@ -78,16 +67,22 @@
         <div class="center">
             <div class="corpo">
                 <textarea type="text" id="compromisso" cols="30" rows="10" class="meu-coment"></textarea>
-                <img src="../assets/enviar.png" type="button" id="add" onclick="add()" width="35" height="35" />
+                <img src="../assets/enviar.png" type="button" id="add" width="35" height="35" />
             </div>
-        </div>
-        <div class="comen ts">
-            <div class="perfil">
-                <img src="" id="perfil" alt="">
+        </div>        
+    </div>    
+    <div class="carrossel">
+        <input type="radio" name="position" checked/>
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <input type="radio" name="position" />
+        <main id="carousel">
+            <div class="item model">
+                <img id="imagem">
             </div>
-            <!-- <img src="../assets/deslike.png" width="24px" height="24px" alt="" class="curtir">
-            <img src="../assets/like.png" alt="" class="curtir"> -->
-        </div>
+        <main>
+    </div>    
 </body>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="./script.js"></script>
